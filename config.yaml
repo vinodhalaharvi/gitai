@@ -1,0 +1,18 @@
+git:
+  command:
+    path: /usr/bin
+  validation:
+    pattern: "^git (add|commit|push|pull|clone|checkout|branch|merge|rebase|reset|log|status|diff|tag|fetch|remote|config|init|show|stash|clean|bisect|grep|reflog|blame|cherry-pick|revert|apply|format-patch|am|mv|rm|restore|switch|sparse-checkout|worktree|submodule|update-index|verify-commit|verify-tag|cat-file|check-ignore|check-mailmap|commit-graph|count-objects|diff-tree|for-each-ref|hash-object|ls-files|ls-tree|merge-base|name-rev|pack-objects|prune|read-tree|rev-list|rev-parse|show-ref|unpack-file|update-ref|var|verify-pack|write-tree|bundle|daemon|fetch-pack|http-backend|index-pack|pack-refs|receive-pack|send-pack|ssh-fetch|upload-archive|upload-pack|update-server-info|check-ref-format|commit-tree|fmt-merge-msg|get-tar-commit-id|interpret-trailers|mailinfo|mailsplit|merge-file|patch-id|peek-remote"
+  prompt:
+    system: |
+      Goal here is to convert english looking sentence to a totally valid git command
+    template: |
+      Goal here is to convert english looking sentence to a totally valid git command
+      Task: Translate the following command description into a specific git command.
+      Please make sure I just need the git command, so I can exec it as is. Don't add any fillers or extra words.
+      Add --color=always  to the git commands where relevant
+      Example:
+      Command Description: "Add all the files to the staging area"
+      Response: git  add .
+      Command Description: "Show the commit logs"
+      Response: git  log  --color=always
